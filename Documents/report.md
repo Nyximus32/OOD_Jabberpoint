@@ -4,7 +4,8 @@
 
 — Moved static variables to an Interface
 
-— Created a font maker class, because the SlideViewerComponent is not supposed to be responsible for the creation of fonts
+— Created a font maker class
+because the SlideViewerComponent is not supposed to be responsible for the creation of fonts
 
 — Making it so, the only thing this class is responsible for is redrawing a presentation slide. This also fixes the weird dependency between this and Presentation.
 
@@ -21,13 +22,14 @@
 
 ## Slide
 
-— broke down the draw() method into 2 smaller ones, since there was code prepetition.
+— Broke down the draw() method into 2 smaller ones, since there was code repetition.
 
 — Renamed the 2 append methods to addSlideItem() and addText(), for easier understanding.
 
 ## MenuController
 
-— Break down the constructor into 3 classes responsible for the File, Help and View navigation buttons. That way it is easier to implement more buttons/categories later on and it makes debugging easier.
+— Broke down the constructor into 3 classes responsible for the File, Help and View navigation buttons.
+That way, it is easier to implement more buttons/categories later on, and it makes debugging easier.
 
 ## SlideItem
 
@@ -43,11 +45,14 @@
 
 ## TextItem
 
-removed unused code
+— Removed unused code
 
 ## Accessor
 
-— Broke down the Accessor and XML Accessor classes to create 2 separate abstract classes responsible for loading and saving presentations. This also allowed to remove the load functionality from the DemoPresentation class, since it wasn't going to be used ever.
+— Broke down the Accessor and XML Accessor classes
+to create 2 separate abstract classes responsible for loading and saving presentations.
+This also allowed removing the load functionality from the DemoPresentation class,
+since it wasn't going to be used ever.
 
 ## KeyController
 
